@@ -34,7 +34,7 @@ const scrapeEvents = async (companyLinkedinUrl, cookies) => {
 
     let events = [];
 
-    for await (element of eventElements) {
+    for (element of eventElements) {
       events.push(await parseElement(element));
     }
     await browser.close();
